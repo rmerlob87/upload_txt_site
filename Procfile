@@ -1,1 +1,1 @@
-web: gunicorn simple_site.py --log-file -
+web: gunicorn simple_site:application
