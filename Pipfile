@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 bcrypt = "==3.1.4"
+"beautifulsoup4" = "==4.6.0"
 blinker = "==1.4"
 certifi = "==2018.4.16"
 cffi = "==1.11.5"
