@@ -1,5 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
+    <p>Hola mostache, create una cuenta 
+    y sube un archivo con extension *.txt
+    que tenga el siguiente formato:<br><br>
+    2,4<br>
+    5,6<br>
+    8,20<br><br>
+    los numeros pueden ser cualquier cosa</p>
     {% for post in posts.items %}
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
