@@ -45,8 +45,8 @@ def create_app(config_class=Config):
     from upload_txt_site.models import User, Post
     
     # To create database for first time
-    # with app.app_context():
-    #     db.create_all()
+    with app.app_context():
+        db.create_all()
 
     admin.add_view(MyModelView(User, db.session))
     admin.add_view(MyModelView(Post, db.session))
