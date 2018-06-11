@@ -20,8 +20,8 @@ class MyModelView(sqla.ModelView):
 
     def is_accessible(self):
         try:
-            if flask_login.current_user.username == "admin":
-                return flask_login.current_user.is_authenticated
+            if current_user.username == "admin":
+                return current_user.is_authenticated
         except:
             pass
 
