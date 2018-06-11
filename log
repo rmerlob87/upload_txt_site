@@ -1,0 +1,100 @@
+2018-06-11T03:39:11.756396+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:11 +0000] "GET /logout HTTP/1.1" 302 217 "https://simple-site-rm.herokuapp.com/post/new" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:11.883031+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:11 +0000] "GET /home HTTP/1.1" 200 3607 "https://simple-site-rm.herokuapp.com/post/new" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:11.755950+00:00 heroku[router]: at=info method=GET path="/logout" host=simple-site-rm.herokuapp.com request_id=6c664beb-e409-471b-8878-b596ad5960da fwd="186.101.158.211" dyno=web.1 connect=1ms service=14ms status=302 bytes=716 protocol=https
+2018-06-11T03:39:11.882847+00:00 heroku[router]: at=info method=GET path="/home" host=simple-site-rm.herokuapp.com request_id=7588b670-ccff-41a2-b0d2-644762e77de4 fwd="186.101.158.211" dyno=web.1 connect=1ms service=15ms status=200 bytes=3783 protocol=https
+2018-06-11T03:39:12.588362+00:00 heroku[router]: at=info method=GET path="/login" host=simple-site-rm.herokuapp.com request_id=a03981c7-3eac-489d-bd94-d36d479da7d6 fwd="186.101.158.211" dyno=web.1 connect=1ms service=6ms status=200 bytes=5322 protocol=https
+2018-06-11T03:39:12.588540+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:12 +0000] "GET /login HTTP/1.1" 200 5146 "https://simple-site-rm.herokuapp.com/home" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:15.806673+00:00 heroku[router]: at=info method=POST path="/login" host=simple-site-rm.herokuapp.com request_id=64480b78-45c0-4fd9-86f4-87402039794f fwd="186.101.158.211" dyno=web.1 connect=1ms service=313ms status=302 bytes=747 protocol=https
+2018-06-11T03:39:15.806846+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:15 +0000] "POST /login HTTP/1.1" 302 217 "https://simple-site-rm.herokuapp.com/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:15.930157+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:15 +0000] "GET /home HTTP/1.1" 200 3660 "https://simple-site-rm.herokuapp.com/login" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:15.930124+00:00 heroku[router]: at=info method=GET path="/home" host=simple-site-rm.herokuapp.com request_id=2c20a3c8-c81d-4c9a-9cac-005c5c4f9619 fwd="186.101.158.211" dyno=web.1 connect=1ms service=11ms status=200 bytes=3836 protocol=https
+2018-06-11T03:39:16.690759+00:00 heroku[router]: at=info method=GET path="/post/new" host=simple-site-rm.herokuapp.com request_id=64836bfb-4e94-46d0-b0c2-90ce6aca03b2 fwd="186.101.158.211" dyno=web.1 connect=1ms service=10ms status=200 bytes=4974 protocol=https
+2018-06-11T03:39:16.690808+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:16 +0000] "GET /post/new HTTP/1.1" 200 4798 "https://simple-site-rm.herokuapp.com/home" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:20.090033+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:20 +0000] "GET /admin/ HTTP/1.1" 200 2665 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:20.089861+00:00 heroku[router]: at=info method=GET path="/admin/" host=simple-site-rm.herokuapp.com request_id=d3a3088e-bbcf-4a37-b900-a461963305fd fwd="186.101.158.211" dyno=web.1 connect=1ms service=11ms status=200 bytes=2841 protocol=https
+2018-06-11T03:39:21.804389+00:00 heroku[router]: at=info method=GET path="/admin/user/" host=simple-site-rm.herokuapp.com request_id=42fbcc9f-7f2a-4325-a7bc-9d61a2d057f6 fwd="186.101.158.211" dyno=web.1 connect=1ms service=21ms status=200 bytes=11074 protocol=https
+2018-06-11T03:39:21.804559+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:21 +0000] "GET /admin/user/ HTTP/1.1" 200 10897 "https://simple-site-rm.herokuapp.com/admin/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:23.227340+00:00 heroku[router]: at=info method=GET path="/admin/post/" host=simple-site-rm.herokuapp.com request_id=dbbd0291-1775-4f64-9236-c898888297f5 fwd="186.101.158.211" dyno=web.1 connect=1ms service=28ms status=200 bytes=8292 protocol=https
+2018-06-11T03:39:23.227414+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:23 +0000] "GET /admin/post/ HTTP/1.1" 200 8116 "https://simple-site-rm.herokuapp.com/admin/user/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:24.084629+00:00 heroku[router]: at=info method=GET path="/admin/user/" host=simple-site-rm.herokuapp.com request_id=1e5d400f-5420-4f13-9fff-85c9c95934a8 fwd="186.101.158.211" dyno=web.1 connect=1ms service=27ms status=200 bytes=11074 protocol=https
+2018-06-11T03:39:24.084911+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:24 +0000] "GET /admin/user/ HTTP/1.1" 200 10897 "https://simple-site-rm.herokuapp.com/admin/post/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:31.926723+00:00 heroku[router]: at=info method=GET path="/" host=simple-site-rm.herokuapp.com request_id=b6fc094a-802c-4b2f-a6f2-63975b33075d fwd="186.101.158.211" dyno=web.1 connect=2ms service=18ms status=200 bytes=3836 protocol=https
+2018-06-11T03:39:31.926863+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:31 +0000] "GET / HTTP/1.1" 200 3660 "-" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:33.449971+00:00 heroku[router]: at=info method=GET path="/post/new" host=simple-site-rm.herokuapp.com request_id=ba9dd319-420a-4c3d-b2bc-bd6009afe9a8 fwd="186.101.158.211" dyno=web.1 connect=1ms service=12ms status=200 bytes=4974 protocol=https
+2018-06-11T03:39:33.450303+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:33 +0000] "GET /post/new HTTP/1.1" 200 4798 "https://simple-site-rm.herokuapp.com/" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
+2018-06-11T03:39:40.363804+00:00 heroku[router]: at=info method=POST path="/post/new" host=simple-site-rm.herokuapp.com request_id=d63c6525-2359-43f2-837a-ea1edc1afe38 fwd="186.101.158.211" dyno=web.1 connect=1ms service=196ms status=500 bytes=3815 protocol=https
+2018-06-11T03:39:40.361556+00:00 app[web.1]: [2018-06-11 03:39:40,360] ERROR in app: Exception on /post/new [POST]
+2018-06-11T03:39:40.361580+00:00 app[web.1]: Traceback (most recent call last):
+2018-06-11T03:39:40.361582+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+2018-06-11T03:39:40.361584+00:00 app[web.1]: context)
+2018-06-11T03:39:40.361586+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+2018-06-11T03:39:40.361588+00:00 app[web.1]: cursor.execute(statement, parameters)
+2018-06-11T03:39:40.361590+00:00 app[web.1]: psycopg2.DataError: value too long for type character varying(20)
+2018-06-11T03:39:40.361596+00:00 app[web.1]: 
+2018-06-11T03:39:40.361591+00:00 app[web.1]: 
+2018-06-11T03:39:40.361593+00:00 app[web.1]: 
+2018-06-11T03:39:40.361594+00:00 app[web.1]: The above exception was the direct cause of the following exception:
+2018-06-11T03:39:40.361598+00:00 app[web.1]: Traceback (most recent call last):
+2018-06-11T03:39:40.361599+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+2018-06-11T03:39:40.361601+00:00 app[web.1]: response = self.full_dispatch_request()
+2018-06-11T03:39:40.361603+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+2018-06-11T03:39:40.361604+00:00 app[web.1]: rv = self.handle_user_exception(e)
+2018-06-11T03:39:40.361606+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+2018-06-11T03:39:40.361607+00:00 app[web.1]: reraise(exc_type, exc_value, tb)
+2018-06-11T03:39:40.361609+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+2018-06-11T03:39:40.361611+00:00 app[web.1]: raise value
+2018-06-11T03:39:40.361612+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+2018-06-11T03:39:40.361614+00:00 app[web.1]: rv = self.dispatch_request()
+2018-06-11T03:39:40.361615+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+2018-06-11T03:39:40.361617+00:00 app[web.1]: return self.view_functions[rule.endpoint](**req.view_args)
+2018-06-11T03:39:40.361619+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+2018-06-11T03:39:40.361620+00:00 app[web.1]: return func(*args, **kwargs)
+2018-06-11T03:39:40.361622+00:00 app[web.1]: File "/app/upload_txt_site/posts/routes.py", line 21, in new_post
+2018-06-11T03:39:40.361624+00:00 app[web.1]: db.session.commit()
+2018-06-11T03:39:40.361625+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 153, in do
+2018-06-11T03:39:40.361627+00:00 app[web.1]: return getattr(self.registry(), name)(*args, **kwargs)
+2018-06-11T03:39:40.361628+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 943, in commit
+2018-06-11T03:39:40.361630+00:00 app[web.1]: self.transaction.commit()
+2018-06-11T03:39:40.361631+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 467, in commit
+2018-06-11T03:39:40.361633+00:00 app[web.1]: self._prepare_impl()
+2018-06-11T03:39:40.361634+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+2018-06-11T03:39:40.361636+00:00 app[web.1]: self.session.flush()
+2018-06-11T03:39:40.361637+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2254, in flush
+2018-06-11T03:39:40.361639+00:00 app[web.1]: self._flush(objects)
+2018-06-11T03:39:40.361640+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+2018-06-11T03:39:40.361642+00:00 app[web.1]: transaction.rollback(_capture_exception=True)
+2018-06-11T03:39:40.361643+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+2018-06-11T03:39:40.361645+00:00 app[web.1]: compat.reraise(exc_type, exc_value, exc_tb)
+2018-06-11T03:39:40.361646+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 187, in reraise
+2018-06-11T03:39:40.361648+00:00 app[web.1]: raise value
+2018-06-11T03:39:40.361650+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+2018-06-11T03:39:40.361651+00:00 app[web.1]: flush_context.execute()
+2018-06-11T03:39:40.361653+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+2018-06-11T03:39:40.361654+00:00 app[web.1]: rec.execute(self)
+2018-06-11T03:39:40.361656+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+2018-06-11T03:39:40.361658+00:00 app[web.1]: uow
+2018-06-11T03:39:40.361659+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+2018-06-11T03:39:40.361661+00:00 app[web.1]: mapper, table, insert)
+2018-06-11T03:39:40.361662+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+2018-06-11T03:39:40.361664+00:00 app[web.1]: execute(statement, params)
+2018-06-11T03:39:40.361665+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 948, in execute
+2018-06-11T03:39:40.361667+00:00 app[web.1]: return meth(self, multiparams, params)
+2018-06-11T03:39:40.361668+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+2018-06-11T03:39:40.361670+00:00 app[web.1]: return connection._execute_clauseelement(self, multiparams, params)
+2018-06-11T03:39:40.361672+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+2018-06-11T03:39:40.361673+00:00 app[web.1]: compiled_sql, distilled_params
+2018-06-11T03:39:40.361675+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+2018-06-11T03:39:40.361676+00:00 app[web.1]: context)
+2018-06-11T03:39:40.361685+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+2018-06-11T03:39:40.361686+00:00 app[web.1]: exc_info
+2018-06-11T03:39:40.361687+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+2018-06-11T03:39:40.361689+00:00 app[web.1]: reraise(type(exception), exception, tb=exc_tb, cause=cause)
+2018-06-11T03:39:40.361690+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 186, in reraise
+2018-06-11T03:39:40.361691+00:00 app[web.1]: raise value.with_traceback(tb)
+2018-06-11T03:39:40.361692+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+2018-06-11T03:39:40.361693+00:00 app[web.1]: context)
+2018-06-11T03:39:40.361694+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+2018-06-11T03:39:40.361696+00:00 app[web.1]: cursor.execute(statement, parameters)
+2018-06-11T03:39:40.361697+00:00 app[web.1]: sqlalchemy.exc.DataError: (psycopg2.DataError) value too long for type character varying(20)
+2018-06-11T03:39:40.361702+00:00 app[web.1]: [SQL: 'INSERT INTO post (title, date_posted, content, uploaded_file, rendered_graph, user_id) VALUES (%(title)s, %(date_posted)s, %(content)s, %(uploaded_file)s, %(rendered_graph)s, %(user_id)s) RETURNING post.id'] [parameters: {'title': 'Test Post 1', 'date_posted': datetime.datetime(2018, 6, 11, 3, 39, 40, 357709), 'content': 'T', 'uploaded_file': 'admin_test_1eeac8f5e0d30571.txt', 'rendered_graph': 'admin_admin_test_1eeac8f5e0d30571_15f9fcd1ce8a4d7c.pdf', 'user_id': 1}] (Background on this error at: http://sqlalche.me/e/9h9h)
+2018-06-11T03:39:40.363760+00:00 app[web.1]: 10.150.200.23 - - [11/Jun/2018:03:39:40 +0000] "POST /post/new HTTP/1.1" 500 3620 "https://simple-site-rm.herokuapp.com/post/new" "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36"
