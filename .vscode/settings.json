@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "C:\\Users\\1010desktop\\.virtualenvs\\upload_txt_site-VHjWZnhh\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.mypyEnabled": false
+}

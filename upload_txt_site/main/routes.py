@@ -1,6 +1,5 @@
 from flask import render_template, request, Blueprint
 from upload_txt_site.models import Post
-from upload_txt_site.posts.utils import save_file, read_file, create_plot
 
 main = Blueprint('main', __name__)
 
@@ -9,8 +8,10 @@ main = Blueprint('main', __name__)
 @main.route("/home")
 def home():
     page = request.args.get('page', 1, type=int)
-    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
+    posts = Post.query.order_by(Post.date_posted.desc()
+                                ).paginate(page=page, per_page=5)
     return render_template('home.html', posts=posts)
+
 
 @main.route("/about")
 def about():

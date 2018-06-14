@@ -13,3 +13,9 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get('EMAIL_USER')
     MAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+    AWS_ACCESS_KEY = os.environ.get('AWS_ACCESS_KEY')
+    AWS_SECRET_KEY = os.environ.get('AWS_SECRET_KEY')
+    S3_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
+    FLASKS3_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
+    FLASKS3_DEBUG = True
+    FLASKS3_ACTIVE = False

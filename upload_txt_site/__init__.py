@@ -6,7 +6,7 @@ from flask_mail import Mail
 from flask_admin import Admin
 from upload_txt_site.config import Config
 from flask_admin.contrib import sqla
-from flask_admin.contrib.sqla import ModelView
+from flask_s3 import FlaskS3
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -14,7 +14,7 @@ login_manager = LoginManager()
 login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail()
-
+s3 = FlaskS3()
 
 class MyModelView(sqla.ModelView):
 
@@ -36,12 +36,12 @@ def create_app(config_class=Config):
     login_manager.init_app(app)
     mail.init_app(app)
     admin.init_app(app)
+    s3.init_app(app)
 
     from upload_txt_site.users.routes import users
     from upload_txt_site.posts.routes import posts
     from upload_txt_site.main.routes import main
     from upload_txt_site.errors.handlers import errors
-
     from upload_txt_site.models import User, Post
     
     # To create database for first time

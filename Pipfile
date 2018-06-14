@@ -47,8 +47,14 @@ Werkzeug = "==0.14.1"
 WTForms = "==2.1"
 "psycopg2" = "*"
 flask-migrate = "*"
+"boto3" = "*"
+pandas = "*"
+pdbsublimetextsupport = "*"
+"flask-s3" = "*"
 
 [dev-packages]
+pylint = "*"
+"flake8" = "*"
 
 [requires]
 python_version = "3.6"
