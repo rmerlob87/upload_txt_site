@@ -7,6 +7,7 @@ from flask_admin import Admin
 from upload_txt_site.config import Config
 from flask_admin.contrib import sqla
 from flask_s3 import FlaskS3
+from upload_txt_site.main.s3Utils import s3_url_for
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -15,6 +16,7 @@ login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail()
 s3 = FlaskS3()
+
 
 class MyModelView(sqla.ModelView):
 
@@ -25,7 +27,9 @@ class MyModelView(sqla.ModelView):
         except:
             pass
 
+
 admin = Admin(name='Admin Page for upload_txt_site', template_mode='bootstrap3')
+
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -43,7 +47,7 @@ def create_app(config_class=Config):
     from upload_txt_site.main.routes import main
     from upload_txt_site.errors.handlers import errors
     from upload_txt_site.models import User, Post
-    
+
     # To create database for first time
     with app.app_context():
         db.create_all()
@@ -55,5 +59,6 @@ def create_app(config_class=Config):
     app.register_blueprint(posts)
     app.register_blueprint(main)
     app.register_blueprint(errors)
+    app.jinja_env.globals.update(s3_url_for=s3_url_for)
 
     return app

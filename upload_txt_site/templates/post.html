@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
   <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+    <img class="rounded-circle article-img" src="{{ s3_url_for('simple-site-rm-assets', post.author.image_file) }}">
     <div class="media-body">
       <div class="article-metadata">
         <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
@@ -16,7 +16,7 @@
       <h2 class="article-title">{{ post.title }}</h2>
       <p class="article-content">{{ post.content }}</p>
       <div>
-            <embed src="{{ url_for('static', filename='graphs_rendered/' + post.rendered_graph) }}" type='application/pdf' class="embed-responsive-item" width=100% height="500">
+            <embed src="{{ s3_url_for('simple-site-rm-assets', post.rendered_graph) }}" type='application/pdf' class="embed-responsive-item" width=100% height="500">
       </div>
     </div>
   </article>

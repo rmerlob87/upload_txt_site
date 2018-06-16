@@ -1,6 +1,7 @@
 from flask import render_template, request, Blueprint
 from upload_txt_site.models import Post
 
+
 main = Blueprint('main', __name__)
 
 

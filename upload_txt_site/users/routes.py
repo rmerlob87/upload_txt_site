@@ -1,11 +1,11 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-from upload_txt_site import db, bcrypt
+from upload_txt_site import db, bcrypt, Config
 from upload_txt_site.models import User, Post
 from upload_txt_site.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
                                    RequestResetForm, ResetPasswordForm)
 from upload_txt_site.users.utils import save_picture, send_reset_email
-
+from upload_txt_site.main.s3Utils import s3_url_for, save_to_s3
 users = Blueprint('users', __name__)
 
 
@@ -52,7 +52,8 @@ def account():
     form = UpdateAccountForm()
     if form.validate_on_submit():
         if form.picture.data:
-            picture_file = save_picture(form.picture.data)
+            picture_file = save_to_s3(Config.S3_BUCKET_NAME,
+                                      "userPhotos", form.picture.data)
             current_user.image_file = picture_file
         current_user.username = form.username.data
         current_user.email = form.email.data
@@ -62,7 +63,7 @@ def account():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
-    image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
+    image_file = s3_url_for('simple-site-rm-assets', current_user.image_file)
     return render_template('account.html', title='Account',
                            image_file=image_file, form=form)
 

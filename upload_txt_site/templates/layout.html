@@ -4,12 +4,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-
+    <link rel="stylesheet" type="text/css" href="{{ s3_url_for('simple-site-rm-assets', 'static/main.css') }}">
     {% if title %}
         <title>Upload *.txt - {{ title }}</title>
     {% else %}
@@ -17,12 +16,13 @@
     {% endif %}
 </head>
 <body>
+  <h1>{{retrievedFile}}</h1>
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-red fixed-top">
         <div class="container">
           <a class="navbar-brand ml-auto" href="{{ url_for('posts.new_post') }}">Upload *.txt</a>
               <a href="https://github.com/rmerlob87/upload_txt_site">
-                <img class="ml-auto mt-0.5" src="{{ url_for('static', filename= 'GitHub-Mark-Light-120px-plus.png') }}" height="32" width="auto"> 
+                <img class="ml-auto mt-0.5" src="{{ s3_url_for('simple-site-rm-assets', 'static/GitHub-Mark-Light-120px-plus.png') }}" height="32" width="auto">               
               </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

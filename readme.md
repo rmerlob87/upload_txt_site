@@ -1,9 +1,9 @@
 A simple Flask site!
 
-Most of the code is from Corey Schafer's tutorial videos on Flask
+Based on code is from Corey Schafer's tutorial videos on Flask
 
 1
 
-Needs to switch to postgres to work properly on heroku....
+Using postgres heroku database, amazon s3 storage.
 
-Where do I save user uploaded files ???
+Still needs to clean up automatically.....
