@@ -1,6 +1,6 @@
 A simple Flask site!
 
-Based on code is from Corey Schafer's tutorial videos on Flask
+Based on code from Corey Schafer's tutorial videos on Flask
 
 1
 
