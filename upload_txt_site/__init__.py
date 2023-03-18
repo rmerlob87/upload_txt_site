@@ -17,6 +17,7 @@ login_manager.login_message_category = 'info'
 mail = Mail()
 s3 = FlaskS3()
 
+#This is a test commit
 
 class MyModelView(sqla.ModelView):
 
